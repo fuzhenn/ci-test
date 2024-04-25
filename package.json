@@ -1,0 +1,26 @@
+{
+  "name": "ci-spec",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "electron-mocha --show-window --renderer ./test/**/*.spec.js",
+    "tdd": "electron-mocha --interactive --renderer ./test/**/*.spec.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@maptalks/gl": "^0.97.4",
+    "@maptalks/vt": "^0.95.0",
+    "electron": "^29.0.0",
+    "electron-mocha": "^12.3.0",
+    "express": "^4.17.1",
+    "happen": "^0.3.1",
+    "maptalks": "1.0.0-rc.33",
+    "mocha": "^10.3.0",
+    "pixelmatch": "^4.0.2"
+  }
+}
