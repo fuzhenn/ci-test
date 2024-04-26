@@ -21,7 +21,7 @@ jobs:
     working_directory: ~/repo
 
     steps:
-      - run: sudo apt install xvfb
+      - run: apt install dbus-user-session
       - browser-tools/install-chrome
       - checkout
 
@@ -45,10 +45,10 @@ jobs:
       #     background: true
 
       # run tests!
-      - run:
-          name: Running X virtual framebuffer
-          command: Xvfb :98 -screen 0 1280x1024x24
-          background: true
-      - run: export DISPLAY=:98 && xvfb-run npm test
+      # - run:
+      #     name: Running X virtual framebuffer
+      #     command: Xvfb :98 -screen 0 1280x1024x24
+      #     background: true
+      - run: npm test
 
 
