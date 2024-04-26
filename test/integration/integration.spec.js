@@ -182,6 +182,7 @@ describe('vector tile integration specs', () => {
                             const actualPath = dir + 'actual.png';
                             writeImageData(actualPath, canvas.getContext('2d').getImageData(0, 0, canvas.width, canvas.height).data, canvas.width, canvas.height);
                         }
+                        console.log(result.diffCount);
                         assert(result.diffCount <= diffCount);
                         if (!finished) {
                             done();
