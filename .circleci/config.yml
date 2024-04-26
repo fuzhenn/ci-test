@@ -38,12 +38,13 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package-lock.json" }}
 
-      - run:
-          name: Start Xvfb
-          command: Xvfb -ac :99 -screen 0 1024x768x24 > /dev/null 2>&1
-          background: true
+      # - run:
+      #     name: Start Xvfb
+      #     command: Xvfb -ac :99 -screen 0 1024x768x24 > /dev/null 2>&1
+      #     background: true
 
       # run tests!
+      # - run: export DISPLAY=:99 && npm test
       - run: export DISPLAY=:99 && npm test
 
 
