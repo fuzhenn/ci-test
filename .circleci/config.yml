@@ -44,6 +44,6 @@ jobs:
       #     background: true
 
       # run tests!
-      - run: xvfb  npm test
+      - run: xvfb npm test
 
 
