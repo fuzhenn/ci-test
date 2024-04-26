@@ -23,6 +23,7 @@ jobs:
     steps:
       - browser-tools/install-chrome
       - checkout
+      - run: sudo apt install xvfb
 
       # Download and cache dependencies
       - restore_cache:
@@ -44,6 +45,6 @@ jobs:
       #     background: true
 
       # run tests!
-      - run: xvfb npm test
+      - run: xvfb-run npm test
 
 
