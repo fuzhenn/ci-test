@@ -38,12 +38,12 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "pnpm-lock.yaml" }}
 
-      - run:
-          name: Start Xvfb
-          command: Xvfb :99 -screen 0 1280x1024x24
-          background: true
+      # - run:
+      #     name: Start Xvfb
+      #     command: Xvfb :99 -screen 0 1280x1024x24
+      #     background: true
 
       # run tests!
-      - run: export DISPLAY=:99 && npm test
+      - run: xvfb-run npm test
 
 
