@@ -107,6 +107,7 @@ describe('vector tile integration specs', () => {
                         }
                         // console.log(JSON.stringify(map.getView()));
                         assert(result.diffCount <= (style.diffCount || 0));
+                        console.log(result.diffCount);
                         ended = true;
                         done();
                     });
