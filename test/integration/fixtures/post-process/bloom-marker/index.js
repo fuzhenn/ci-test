@@ -7,11 +7,11 @@ const data = {
                 type: 'Polygon',
                 coordinates: [
                     [
-                        [-1., 1.0],
+                        [0.1, 1.0],
                         [1., 1.0],
-                        [1., -1.0],
-                        [-1., -1],
-                        [-1., 1]
+                        [1., 0.1],
+                        [0.1, 0.1],
+                        [0.1, 1]
                     ]
                 ]
             },
@@ -71,8 +71,8 @@ module.exports = {
     view: {
         pitch: 70,
         bearing: 60,
-        center: [0, 0],
-        zoom: 6.5
+        center: [0.5, 0.5],
+        zoom: 7
     },
     sceneConfig: {
         postProcess: {
