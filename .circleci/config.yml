@@ -40,7 +40,7 @@ jobs:
 
       - run:
           name: Start Xvfb
-          command: Xvfb :98 -screen 0 1280x1024x24
+          command: sudo Xvfb :98 -screen 0 1280x1024x24
           background: true
 
       # run tests!
