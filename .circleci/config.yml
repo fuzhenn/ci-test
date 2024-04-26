@@ -27,7 +27,7 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package-lock.json" }}
+          - v1-dependencies-{{ checksum "pnpm-lock.yaml" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
@@ -36,15 +36,14 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package-lock.json" }}
+          key: v1-dependencies-{{ checksum "pnpm-lock.yaml" }}
 
-      # - run:
-      #     name: Start Xvfb
-      #     command: Xvfb -ac :99 -screen 0 1024x768x24 > /dev/null 2>&1
-      #     background: true
+      - run:
+          name: Start Xvfb
+          command: Xvfb :99 -screen 0 1280x1024x24
+          background: true
 
       # run tests!
-      # - run: export DISPLAY=:99 && npm test
       - run: export DISPLAY=:99 && npm test
 
 
