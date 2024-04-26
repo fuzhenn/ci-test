@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "electron-mocha --main ignore-gpu-blacklist.js --show-window --renderer ./test/**/*.spec.js -- -g \"post process render specs\"",
+    "test": "electron-mocha --main ignore-gpu-blacklist.js --show-window --renderer ./test/**/*.spec.js",
     "tdd": "electron-mocha --interactive --renderer ./test/**/*.spec.js"
   },
   "author": "",
