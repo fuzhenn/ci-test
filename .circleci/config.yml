@@ -47,8 +47,8 @@ jobs:
       # run tests!
       - run:
           name: Running X virtual framebuffer
-          command: Xvfb :99 -screen 0 1280x1024x24
+          command: Xvfb :98 -screen 0 1280x1024x24
           background: true
-      - run: xvfb-run npm test
+      - run: export DISPLAY=:98 && xvfb-run npm test
 
 
