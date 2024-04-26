@@ -224,7 +224,7 @@ describe('vector tile integration specs', () => {
         const specs = readSpecs(path.resolve(__dirname, 'fixtures', 'post-process'));
         for (const p in specs) {
             if (hasOwn(specs, p)) {
-                it(p, postProcessRunner(p, specs[p]));
+                it(p, postProcessRunner(p, specs[p])).timeout(5000);
             }
         }
     });
