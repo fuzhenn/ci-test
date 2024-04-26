@@ -1,0 +1,12 @@
+language: node_js
+dist: xenial
+services:
+  - xvfb
+node_js:
+  - stable
+  - 18
+install:
+  - npm install --no-progress
+  - $(npm bin)/electron --version
+script:
+  - npm test

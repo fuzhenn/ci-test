@@ -15,7 +15,7 @@
   "dependencies": {
     "@maptalks/gl": "^0.97.4",
     "@maptalks/vt": "^0.95.0",
-    "electron": "^20.0.0",
+    "electron": "^29.0.0",
     "electron-mocha": "^12.3.0",
     "express": "^4.17.1",
     "happen": "^0.3.1",
