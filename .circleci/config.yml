@@ -41,6 +41,7 @@ jobs:
       - run: sudo apt-get install ttf-mscorefonts-installer
       - run: sudo apt-get install fontconfig
       - run: cd ~/repo/fonts && sudo mkfontscale && sudo mkfontdir && sudo fc-cache -fv && cd ~/repo
+      - run: fc-list
       - run: fc-match sans-serif
       - run: npm test
 

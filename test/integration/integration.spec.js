@@ -106,8 +106,8 @@ describe('vector tile integration specs', () => {
                             writeImageData(actualPath, canvas.getContext('2d').getImageData(0, 0, canvas.width, canvas.height).data, canvas.width, canvas.height);
                         }
                         // console.log(JSON.stringify(map.getView()));
-                        assert(result.diffCount <= (style.diffCount || 0));
                         console.log(result.diffCount);
+                        assert(result.diffCount <= (style.diffCount || 0));
                         ended = true;
                         done();
                     });
