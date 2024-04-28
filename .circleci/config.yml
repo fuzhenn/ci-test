@@ -37,7 +37,7 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "pnpm-lock.yaml" }}
-
+      - run: fc-match sans-serif
       - run: npm test
 
 
