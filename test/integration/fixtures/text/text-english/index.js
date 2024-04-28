@@ -12,6 +12,7 @@ const style = [
             }
         },
         symbol: {
+            textFaceName: 'Microsoft YaHei,微软雅黑',
             textName: 'aAg.%',
             textSize: 18
         }
