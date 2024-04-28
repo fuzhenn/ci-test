@@ -12,6 +12,7 @@ const style = [
         },
         filter: ['==', 'type', 1],
         symbol: {
+            textFaceName: 'Microsoft YaHei,微软雅黑',
             textName: '貔貅2',
             textSize: 30,
             textDx: 10,
