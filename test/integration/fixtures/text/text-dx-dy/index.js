@@ -29,7 +29,7 @@ const style = [
             }
         },
         symbol: {
-            textFaceName: 'Microsoft YaHei',
+            textFaceName: 'Microsoft YaHei,微软雅黑',
             textName: '貔貅',
             textSize: 30
         }
