@@ -38,7 +38,8 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "pnpm-lock.yaml" }}
       - run: sudo apt-get update
-      - run: sudo apt install mkfontscale mkfontdir fc-cache
+      - run: sudo apt-get install ttf-mscorefonts-installer
+      - run: sudo apt-get install fontconfig
       - run: cd ~/repo/fonts && sudo mkfontscale && sudo mkfontdir && sudo fc-cache -fv && cd ~/repo
       - run: fc-match sans-serif
       - run: npm test
