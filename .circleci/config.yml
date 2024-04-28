@@ -37,8 +37,9 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "pnpm-lock.yaml" }}
-      - run: sudo apt install mkfontscale mkfontdir fc-cache
-      - run: cd ~/repo/fonts && sudo mkfontscale && sudo mkfontdir && sudo fc-cache -fv && cd ~/repo
+      - run: sudo add-apt-repository ppa:font-family/mstt
+      - run: sudo apt-get update
+      - run: sudo apt-get install msttcorefonts
       - run: fc-match sans-serif
       - run: npm test
 
