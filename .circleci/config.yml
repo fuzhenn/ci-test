@@ -21,7 +21,7 @@ jobs:
     working_directory: ~/repo
 
     steps:
-      - browser-tools/install-chrome
+      # - browser-tools/install-chrome
       - checkout
 
       # Download and cache dependencies
@@ -37,7 +37,8 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "pnpm-lock.yaml" }}
-      - run: cd ~/repo/fonts && sudo mkfontscale && sudo mkfontdir && sudo fc-cache -fv
+      - run: sudo apt install mkfontscale mkfontdir fc-cache
+      - run: cd ~/repo/fonts && sudo mkfontscale && sudo mkfontdir && sudo fc-cache -fv && cd ~/repo
       - run: fc-match sans-serif
       - run: npm test
 
