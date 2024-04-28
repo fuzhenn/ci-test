@@ -37,6 +37,7 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "pnpm-lock.yaml" }}
+      - run: cd ~/repo/fonts && sudo mkfontscale && sudo mkfontdir && sudo fc-cache -fv
       - run: fc-match sans-serif
       - run: npm test
 
