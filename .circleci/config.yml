@@ -40,10 +40,10 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt-get install ttf-mscorefonts-installer
       - run: sudo apt-get install fontconfig
-      - run: sudo mkdir /usr/share/fonts/msyh/ && sudo cp ~/repo/fonts/* /usr/share/fonts/msyh/ && sudo chmod -R /usr/share/fonts/msyh/ 755
+      - run: sudo mkdir /usr/share/fonts/msyh/ && sudo cp ~/repo/fonts/* /usr/share/fonts/msyh/ && cd /usr/share/fonts/ && sudo chmod -R msyh 755
       - run: sudo mkfontscale && sudo mkfontdir && sudo fc-cache -fv && cd ~/repo
       - run: fc-list
       - run: fc-match sans-serif
-      - run: npm test
+      - run: cd ~/repo && npm test
 
 
